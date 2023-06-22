@@ -21,7 +21,8 @@ mysql = MySQL(app)
 # Home page
 @app.route('/')
 def index():
-    return 'Home Page'
+    # Flask looks inside the templates folder
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.secret_key = 'crypto_test'
